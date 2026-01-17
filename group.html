@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: left;
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .status {
+            font-weight: bold;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .login {
+            background-color: green;
+        }
+
+        .logout {
+            background-color: red;
+        }
+
+        .change {
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Student Profile</h2>
+
+    <p><strong>Name:</strong> Your Name</p>
+    <p><strong>Age:</strong> 18</p>
+    <p><strong>Course:</strong> <span id="course">Web Development</span></p>
+    <p><strong>Status:</strong> <span id="status" class="status">Offline</span></p>
+
+    <div class="buttons">
+        <button class="login" onclick="login()">Login</button>
+        <button class="logout" onclick="logout()">Logout</button>
+        <button class="change" onclick="changeCourse()">Change Course</button>
+    </div>
+</div>
+
+<script>
+    function login() {
+        document.getElementById("status").innerText = "Online";
+        document.getElementById("status").style.color = "green";
+    }
+
+    function logout() {
+        document.getElementById("status").innerText = "Offline";
+        document.getElementById("status").style.color = "red";
+    }
+
+    function changeCourse() {
+        document.getElementById("course").innerText = "Computer Science";
+    }
+</script>
+
+</body>
+</html>
